@@ -696,8 +696,18 @@ video {
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .bg-color-primary {
@@ -730,6 +740,11 @@ video {
   padding-bottom: 5rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -752,6 +767,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-xl {
@@ -779,6 +799,10 @@ video {
 .text-color-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 .ease-in {
@@ -873,6 +897,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.hover\:bg-color-secondary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 125 59 / var(--tw-bg-opacity));
+}
+
 .hover\:text-color-secondary:hover {
   --tw-text-opacity: 1;
   color: rgb(255 125 59 / var(--tw-text-opacity));
@@ -906,6 +935,18 @@ video {
     flex-direction: row;
   }
 
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
   .md\:pr-10 {
     padding-right: 2.5rem;
   }
@@ -935,5 +976,127 @@ video {
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .lg\:after\:absolute::after {
+    content: var(--tw-content);
+    position: absolute;
+  }
+
+  .lg\:after\:left-32::after {
+    content: var(--tw-content);
+    left: 8rem;
+  }
+
+  .lg\:after\:top-4::after {
+    content: var(--tw-content);
+    top: 1rem;
+  }
+
+  .lg\:after\:top-10::after {
+    content: var(--tw-content);
+    top: 2.5rem;
+  }
+
+  .lg\:after\:flex::after {
+    content: var(--tw-content);
+    display: flex;
+  }
+
+  .lg\:after\:h-7::after {
+    content: var(--tw-content);
+    height: 1.75rem;
+  }
+
+  .lg\:after\:w-52::after {
+    content: var(--tw-content);
+    width: 13rem;
+  }
+
+  .lg\:after\:bg-\[url\(\'\/img\/line-bottom\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('/img/line-bottom.png');
+  }
+
+  .lg\:after\:bg-\[url\(\'\/\/line-bottom\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('//line-bottom.png');
+  }
+
+  .lg\:after\:bg-\[url\(\'\/im\/line-bottom\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('/im/line-bottom.png');
+  }
+
+  .lg\:after\:bg-\[url\(\'\/image\/line-bottom\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('/image/line-bottom.png');
+  }
+
+  .lg\:after\:bg-\[url\(\'\/\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('/');
+  }
+
+  .lg\:after\:bg-\[url\(\'\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('');
+  }
+
+  .lg\:after\:bg-\[url\(\'\/i\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('/i');
+  }
+
+  .lg\:after\:bg-\[url\(\'\.\/\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('./');
+  }
+
+  .lg\:after\:bg-\[url\(\'\.\/image\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('./image');
+  }
+
+  .lg\:after\:bg-\[url\(\'\.\/image\/\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('./image/');
+  }
+
+  .lg\:after\:bg-\[url\(\'\.\/image\/line-bottom\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('./image/line-bottom.png');
+  }
+
+  .lg\:after\:bg-\[url\(\'\/img\/line\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('/img/line.png');
+  }
+
+  .lg\:after\:bg-\[url\(\'\.\/image\/li\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('./image/li');
+  }
+
+  .lg\:after\:bg-\[url\(\'\.\/image\/line\.png\'\)\]::after {
+    content: var(--tw-content);
+    background-image: url('./image/line.png');
+  }
+
+  .lg\:after\:bg-no-repeat::after {
+    content: var(--tw-content);
+    background-repeat: no-repeat;
+  }
+
+  .lg\:after\:content-\[\'\'\]::after {
+    --tw-content: '';
+    content: var(--tw-content);
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:after\:left-52::after {
+    content: var(--tw-content);
+    left: 13rem;
   }
 }
