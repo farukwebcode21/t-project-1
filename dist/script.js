@@ -16,3 +16,6 @@ menu.addEventListener("click", (event) => {
     }
   }
 });
+
+const userTest = document.getElementsByClassName("user-text");
+const userPic = document.getElementsByClassName("user-pic");
