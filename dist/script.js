@@ -17,5 +17,17 @@ menu.addEventListener("click", (event) => {
   }
 });
 
-const userTest = document.getElementsByClassName("user-text");
-const userPic = document.getElementsByClassName("user-pic");
+const userTexts = document.getElementsByClassName("user-text");
+const userPics = document.getElementsByClassName("user-pic");
+
+const showReview = () => {
+  for (userPic of userPics) {
+    userPic.classList.remove("active-pic");
+  }
+  for (userText of userTexts) {
+    userText.classList.remove("active-text");
+  }
+  let i = Array.from(userPics).indexOf(event.target);
+  userPics[i].classList.add("active-pic");
+  userTexts[i].classList.add("active-text");
+};
