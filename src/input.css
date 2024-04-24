@@ -4,6 +4,9 @@
 .btn{
     @apply bg-color-secondary rounded-full px-9 py-2 capitalize font-bold hover:opacity-80 ease-in duration-200;
 }
+.card_btn{
+    @apply bg-color-primary-dark py-3 px-2 w-full rounded-full capitalize font-bold hover:bg-color-secondary ease-in duration-200;
+}
 .title{
     @apply text-3xl md:text-4xl font-bold leading-snug mb-4;
 }
