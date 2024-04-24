@@ -32,23 +32,43 @@ const showReview = () => {
   userTexts[i].classList.add("active-text");
 };
 
+// const toggleBtn = document.getElementById("toggleBtn");
+// const card_1_front = document.getElementById("card_1_front");
+// const card_1_back = document.getElementById("card_1_back");
+
+// const card_2_front = document.getElementById("card_2_front");
+// const card_2_back = document.getElementById("card_2_back");
+
+// const card_3_front = document.getElementById("card_3_front");
+// const card_3_back = document.getElementById("card_3_back");
+
+// toggleBtn.addEventListener("change", () => {
+//   card_1_front.classList.toggle("-rotate-y-180");
+//   card_1_back.classList.toggle("rotate-y-180");
+
+//   card_2_front.classList.toggle("-rotate-y-180");
+//   card_2_back.classList.toggle("rotate-y-180");
+
+//   card_3_front.classList.toggle("-rotate-y-180");
+//   card_3_back.classList.toggle("rotate-y-180");
+// });
+
+
 const toggleBtn = document.getElementById("toggleBtn");
-const card_1_front = document.getElementById("card_1_front");
-const card_1_back = document.getElementById("card_1_back");
 
-const card_2_front = document.getElementById("card_2_front");
-const card_2_back = document.getElementById("card_2_back");
+const numCards = 3; //Define the number of cards
 
-const card_3_front = document.getElementById("card_3_front");
-const card_3_back = document.getElementById("card_3_back");
+// function to toggle classes for a card
+
+const toggleCardClasses = (front, back) => {
+  front.classList.toggle("-rotate-y-180");
+  back.classList.toggle("rotate-y-180");
+};
 
 toggleBtn.addEventListener("change", () => {
-  card_1_front.classList.toggle("-rotate-y-180");
-  card_1_back.classList.toggle("rotate-y-180");
-
-  card_2_front.classList.toggle("-rotate-y-180");
-  card_2_back.classList.toggle("rotate-y-180");
-
-  card_3_front.classList.toggle("-rotate-y-180");
-  card_3_back.classList.toggle("rotate-y-180");
+  for (let i = 1; i <= numCards; i++) {
+    const cardFront = document.getElementById(`card_${i}_front`);
+    const cardBack = document.getElementById(`card_${i}_back`);
+    toggleCardClasses(cardFront, cardBack);
+  }
 });
