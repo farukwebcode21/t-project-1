@@ -2,6 +2,19 @@ const hamburger = document.querySelector("#hamburger");
 const menu = document.querySelector("#menu");
 const faSolid = document.querySelector(".fa-solid");
 
+const navbar = document.querySelector("header");
+window.onscroll = () => {
+  if (window.scrollY > 100) {
+    navbar.classList.add("bg-color-primary-dark");
+    navbar.classList.add("border-b");
+    navbar.classList.add("border-color-gray");
+  } else {
+    navbar.classList.remove("bg-color-primary-dark");
+    navbar.classList.remove("border-b");
+    navbar.classList.remove("border-color-gray");
+  }
+};
+
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("hidden");
   faSolid.classList.toggle("fa-xmark");
@@ -52,7 +65,6 @@ const showReview = () => {
 //   card_3_front.classList.toggle("-rotate-y-180");
 //   card_3_back.classList.toggle("rotate-y-180");
 // });
-
 
 const toggleBtn = document.getElementById("toggleBtn");
 
